@@ -1,5 +1,6 @@
 "use client";
 
+import Logo from "@/assets/svg/Logo";
 import { Button } from "@/components/ui/button";
 import { useGetMe, useLogout } from "@/hooks";
 import { UserRole } from "@/types";
@@ -56,7 +57,10 @@ const Header = () => {
   return (
     <header className="w-full h-16 border border-b">
       <div className="flex justify-between items-center h-full max-w-7xl mx-auto">
-        <div>PH Healthcare</div>
+        <div className="flex items-center gap-2">
+          <Logo />
+          <span>PH Healthcare</span>
+        </div>
         <nav className="flex gap-5">
           {routes.map((route) => (
             <Link key={route.url} href={route.url}>
