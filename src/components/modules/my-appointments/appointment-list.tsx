@@ -46,7 +46,7 @@ const AppointmentList = () => {
       {appointments.map(({ doctor, status, id }) => (
         <div key={id} className="border rounded-md p-3">
           <div className="w-full flex gap-3">
-            <span>Doctor: {doctor.name}</span>
+            <span>Doctor: {doctor?.name}</span>
             <span>Status: {status}</span>
             <div className="ml-auto">
               <Button>Join</Button>

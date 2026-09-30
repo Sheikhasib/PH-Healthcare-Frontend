@@ -74,6 +74,16 @@ export interface AppointmentParams {
   sortOrder?: "desc" | "asc";
 }
 
+export interface MyAppointmentsResponse {
+  data: Appointment[];
+  meta?: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
+}
+
 export interface BookAppointmentPayload {
   scheduleId: string;
 }
